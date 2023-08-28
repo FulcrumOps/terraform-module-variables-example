@@ -2,6 +2,18 @@
 
 Demonstrating a couple of ways to populate variables of a module
 
+## The module setup
+
+```
+$ cat modules/VDI/variables.tf
+variable "teams" {
+  type = map(object({
+    team_name = string
+    location  = string
+  }))
+}
+```
+
 ## `method_one`
 
 The data that the module expects is hard coded in the call to the module.
